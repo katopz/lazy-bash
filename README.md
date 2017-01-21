@@ -3,10 +3,14 @@ Lazy bash belong here
 
 #### Add SSH to server
 ```shell
+# Config
 export SERVER=root@foo.bar
 export SSH_PUBKEY=~/.ssh/id_rsa.pub
-ssh $SERVER << EOF
-cat "" >> ~/.ssh/authorized_keys
-cat $SSH_PUBKEY >> ~/.ssh/authorized_keys
-EOF
+
+# Add
+ssh $SERVER sh -c "'cat >> .ssh/authorized_keys'" < $SSH_PUBKEY
+
+# Verify
+ssh $SERVER cat .ssh/authorized_keys
+
 ```
