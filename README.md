@@ -1,6 +1,13 @@
 # lazy-bash
 Lazy bash belong here
 
+#### Output to file
+
+- `>` or `1>` Redirects `stdout` to file.
+- `2>` Redirects `stderr` to file.
+- `&>` Redirects `stdout` and `stderr` to file.
+- `/dev/null` is a blackhole.
+
 #### Add SSH to server
 ```shell
 # Config
