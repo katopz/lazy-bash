@@ -21,3 +21,9 @@ ssh $SERVER sh -c "'cat >> .ssh/authorized_keys'" < $SSH_PUBKEY
 ssh $SERVER cat .ssh/authorized_keys
 
 ```
+### Fix Host key verification failed.
+> To fix `WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!`
+
+```shell
+ssh-keygen -R YOUR_HOST_IP_OR_DOMAIN
+```
