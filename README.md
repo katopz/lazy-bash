@@ -1,14 +1,19 @@
 # lazy-bash
 Lazy bash belong here
 
-#### Output to file
+### Create `cert.key` and `cert.pem`
+```shell
+# Create cert.key and cert.pem for a certificate that is valid for the next 10 years.
+sudo openssl req -x509 -sha256 -newkey rsa:2048 -keyout cert.key -out cert.pem -days 1024 -nodes -subj '/CN=www.foo.com'
+```
+### Output to file
 
 - `>` or `1>` Redirects `stdout` to file.
 - `2>` Redirects `stderr` to file.
 - `&>` Redirects `stdout` and `stderr` to file.
 - `/dev/null` is a blackhole.
 
-#### Add SSH to server
+### Add SSH to server
 ```shell
 # Config
 export SERVER=root@foo.bar
