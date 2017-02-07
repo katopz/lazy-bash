@@ -1,10 +1,12 @@
 # lazy-bash
 Lazy bash belong here
 
-### Create `cert.key` and `cert.pem`
+### Creating a self-signed ssl cert
 ```shell
 # Create cert.key and cert.pem for a certificate that is valid for the next 10 years.
-sudo openssl req -x509 -sha256 -newkey rsa:2048 -keyout cert.key -out cert.pem -days 1024 -nodes -subj '/CN=www.foo.com'
+openssl req -x509 -newkey rsa:4086 \
+-keyout key.pem -out cert.pem \
+-days 3650 -nodes -sha256
 ```
 ### Output to file
 
