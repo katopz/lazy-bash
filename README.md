@@ -1,6 +1,9 @@
 # lazy-bash
 Lazy bash belong here
 
+### TODO
+- [ ] http://www.tldp.org/LDP/abs/html/index.html
+
 ### Creating a self-signed ssl cert
 ```shell
 # Create cert.key and cert.pem for a certificate that is valid for the next 10 years.
