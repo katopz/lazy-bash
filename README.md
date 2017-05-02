@@ -3,6 +3,7 @@ Lazy bash belong here
 
 ### TODO
 - [ ] http://www.tldp.org/LDP/abs/html/index.html
+- [ ] https://github.com/Idnan/bash-guide
 
 ### Creating a self-signed ssl cert
 ```shell
