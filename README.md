@@ -5,6 +5,16 @@ Lazy bash belong here
 - [ ] http://www.tldp.org/LDP/abs/html/index.html
 - [ ] https://github.com/Idnan/bash-guide
 
+### Replace template file with `ENV`
+```shell
+# via docker-compose
+command: /bin/bash -c "envsubst '\$VAR1 \$VAR2' < /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+```
+or
+```shell
+sed -i "s|{{DOMAIN}}|${DOMAIN}|g" /etc/nginx/conf.d/https.conf
+```
+
 ### Creating a self-signed ssl cert
 ```shell
 # Create cert.key and cert.pem for a certificate that is valid for the next 10 years.
