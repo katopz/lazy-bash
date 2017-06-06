@@ -11,7 +11,7 @@ Lazy bash belong here
 echo "Hello {{FOO}}" > foo.conf.tmpl
 
 # Replace {{FOO}} with FOO variable and output to new foo.conf file 
-FOO="world" sed -e "s/{{FOO}}/$FOO/g" foo.conf.tmpl > foo.conf
+FOO="world" && sed -e "s/{{FOO}}/$FOO/g" foo.conf.tmpl > foo.conf
 ```
 
 ### Creating a self-signed ssl cert
