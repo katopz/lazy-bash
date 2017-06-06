@@ -7,12 +7,11 @@ Lazy bash belong here
 
 ### Replace template file with `ENV`
 ```shell
-# via docker-compose
-command: /bin/bash -c "envsubst '\$VAR1 \$VAR2' < /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
-```
-or
-```shell
-sed -i "s|{{DOMAIN}}|${DOMAIN}|g" /etc/nginx/conf.d/https.conf
+# Create template
+echo "Hello {{FOO}}" > foo.conf.tmpl
+
+# Replace {{FOO}} with FOO variable and output to new foo.conf file 
+FOO="world" sed -e "s/{{FOO}}/$FOO/g" foo.conf.tmpl > foo.conf
 ```
 
 ### Creating a self-signed ssl cert
