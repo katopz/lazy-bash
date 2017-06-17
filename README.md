@@ -5,6 +5,11 @@ Lazy bash belong here
 - [ ] http://www.tldp.org/LDP/abs/html/index.html
 - [ ] https://github.com/Idnan/bash-guide
 
+### To see macOS power consumtion
+```shell
+system_profiler SPPowerDataType
+```
+
 ### Replace template file with `ENV`
 ```shell
 # Create template
