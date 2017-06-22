@@ -9,6 +9,14 @@ Lazy bash belong here
 ```shell
 system_profiler SPPowerDataType
 ```
+### Read .env
+```shell
+# Create some .env
+echo "FOO=123" > .env
+
+# Use it
+source .env; echo $FOO
+```
 
 ### Replace template file with `ENV`
 ```shell
@@ -16,7 +24,10 @@ system_profiler SPPowerDataType
 echo "Hello {{FOO}}" > foo.conf.tmpl
 
 # Replace {{FOO}} with FOO variable and output to new foo.conf file 
-FOO="world" && sed -e "s/{{FOO}}/$FOO/g" foo.conf.tmpl > foo.conf
+sed -e "s|{{FOO}}|$FOO|g" foo.conf.tmpl > foo.conf
+
+# Multiple replacement
+sed -e "s|{{FOO}}|$FOO|g;s|{{BAR}}|$BAR|g" foo.conf.tmpl > foo.conf
 ```
 
 ### Creating a self-signed ssl cert
