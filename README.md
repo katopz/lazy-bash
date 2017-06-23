@@ -5,6 +5,18 @@ Lazy bash belong here
 - [ ] http://www.tldp.org/LDP/abs/html/index.html
 - [ ] https://github.com/Idnan/bash-guide
 
+### Multiple line .env
+```shell
+DO_OPTION=$(cat <<EOF
+'{
+  "name": "My-Droplet",
+  "region": "nyc2",
+  "size": "512mb",
+  "image": "ubuntu-14-04-x64"
+}'
+EOF)
+```
+
 ### To see macOS power consumtion
 ```shell
 system_profiler SPPowerDataType
