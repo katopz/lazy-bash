@@ -5,6 +5,15 @@ Lazy bash belong here
 - [ ] http://www.tldp.org/LDP/abs/html/index.html
 - [ ] https://github.com/Idnan/bash-guide
 
+### Repace $FOO with BAR
+```shell
+src='$FOO'
+match='$FOO'
+repl='BAR'
+echo ${src/$match/$repl}
+# Hello BAR
+```
+
 ### Multiple line .env
 ```shell
 DO_OPTION=$(cat <<EOF
