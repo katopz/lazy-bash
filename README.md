@@ -7,7 +7,7 @@ Lazy bash belong here
 
 ### Repace $FOO with BAR
 ```shell
-src='$FOO'
+src='Hello $FOO'
 match='$FOO'
 repl='BAR'
 echo ${src/$match/$repl}
