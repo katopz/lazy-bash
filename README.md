@@ -1,18 +1,11 @@
 # lazy-bash
 Lazy bash belong here
 
-### TODO
+## TODO
 - [ ] http://www.tldp.org/LDP/abs/html/index.html
 - [ ] https://github.com/Idnan/bash-guide
 
-### Repace $FOO with BAR
-```shell
-src='Hello $FOO'
-match='$FOO'
-repl='BAR'
-echo ${src/$match/$repl}
-# Hello BAR
-```
+## Random topics
 
 ### Multiple line .env
 ```shell
@@ -37,18 +30,6 @@ echo "FOO=123" > .env
 
 # Use it
 source .env; echo $FOO
-```
-
-### Replace template file with `ENV`
-```shell
-# Create template
-echo "Hello {{FOO}}" > foo.conf.tmpl
-
-# Replace {{FOO}} with FOO variable and output to new foo.conf file 
-sed -e "s|{{FOO}}|$FOO|g" foo.conf.tmpl > foo.conf
-
-# Multiple replacement
-sed -e "s|{{FOO}}|$FOO|g;s|{{BAR}}|$BAR|g" foo.conf.tmpl > foo.conf
 ```
 
 ### Creating a self-signed ssl cert
@@ -83,4 +64,25 @@ ssh $SERVER cat .ssh/authorized_keys
 
 ```shell
 ssh-keygen -R YOUR_HOST_IP_OR_DOMAIN
+```
+## Replacement
+### Repace $FOO with BAR
+```shell
+src='Hello $FOO'
+match='$FOO'
+repl='BAR'
+echo ${src/$match/$repl}
+# Hello BAR
+```
+
+### Replace template file with `ENV`
+```shell
+# Create template
+echo "Hello {{FOO}}" > foo.conf.tmpl
+
+# Replace {{FOO}} with FOO variable and output to new foo.conf file 
+sed -e "s|{{FOO}}|$FOO|g" foo.conf.tmpl > foo.conf
+
+# Multiple replacement
+sed -e "s|{{FOO}}|$FOO|g;s|{{BAR}}|$BAR|g" foo.conf.tmpl > foo.conf
 ```
