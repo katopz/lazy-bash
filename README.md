@@ -7,6 +7,12 @@ Lazy bash belong here
 
 ## Random topics
 
+### Kill port ower
+> Kill testrpc that use 8545
+```shell
+lsof -t -i tcp:8545 | xargs kill
+```
+
 ### Multiple line .env
 ```shell
 DO_OPTION=$(cat <<EOF
