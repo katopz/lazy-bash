@@ -46,11 +46,11 @@ openssl req -x509 -newkey rsa:4086 \
 -days 3650 -nodes -sha256
 ```
 ### Output to file
-
 - `>` or `1>` Redirects `stdout` to file.
 - `2>` Redirects `stderr` to file.
 - `&>` Redirects `stdout` and `stderr` to file.
 - `/dev/null` is a blackhole.
+- `echo $'export NVM_DIR="$HOME/.nvm"\n. "/usr/local/opt/nvm/nvm.sh"' >> ~/.bash_profile`
 
 ### Add SSH to server
 ```shell
