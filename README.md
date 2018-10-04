@@ -52,6 +52,11 @@ openssl req -x509 -newkey rsa:4086 \
 - `/dev/null` is a blackhole.
 - `echo $'export NVM_DIR="$HOME/.nvm"\n. "/usr/local/opt/nvm/nvm.sh"' >> ~/.bash_profile`
 
+### Apply from source
+```shell
+source ~/.bash_profile
+```
+
 ### Add SSH to server
 ```shell
 # Config
