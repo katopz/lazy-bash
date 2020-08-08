@@ -7,10 +7,10 @@ Lazy bash belong here
 
 ## Random topics
 
-### Kill port ower
-> Kill testrpc that use 8545
+### Kill process by port number
+> Kill firebase-tools that use 4400,5000,5001,8080
 ```shell
-lsof -t -i tcp:8545 | xargs kill
+kill $(lsof -it:4400,5000,5001,8080)
 ```
 
 ### Multiple line .env
