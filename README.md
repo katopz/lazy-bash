@@ -10,7 +10,7 @@ Lazy bash belong here
 ### Kill process by port number
 > Kill firebase-tools that use 4400,5000,5001,8080
 ```shell
-kill $(lsof -it:4400,5000,5001,8080)
+kill -9 $(lsof -it:4400,5000,5001,8080)
 ```
 
 ### Multiple line .env
